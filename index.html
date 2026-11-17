@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10121d">
+    <meta name="description" content="GiroLab convierte cualquier tema en una idea lista para tu próximo Short.">
+    <title>GiroLab — Ideas para Shorts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="GiroLab, inicio">
+          <span class="brand-mark" aria-hidden="true">∞</span>
+          <span>GIROLAB<span class="brand-dot">.</span></span>
+        </a>
+        <div class="channel-tag"><span class="status-dot"></span> PARA GIRO INFINITO</div>
+      </header>
+
+      <section class="intro" id="inicio">
+        <p class="eyebrow"><span class="sparkle">✳</span> IDEAS QUE DAN LA VUELTA AL SCROLL</p>
+        <h1>¿Qué giro le<br><span>damos hoy?</span></h1>
+        <p class="intro-copy">Elige un tema y recibe una idea lista para convertir en tu próximo Short.</p>
+      </section>
+
+      <section class="workspace" aria-label="Generador de ideas">
+        <div class="main-column">
+          <div class="category-heading">
+            <div>
+              <p class="section-kicker">01 / ELIGE TU UNIVERSO</p>
+              <h2>¿De qué hablamos?</h2>
+            </div>
+            <span class="category-hint">Una sorpresa en cada giro <span aria-hidden="true">↘</span></span>
+          </div>
+
+          <div class="category-list" role="group" aria-label="Categoría de la idea" id="categories"></div>
+
+          <article class="idea-card" aria-live="polite" aria-atomic="true">
+            <div class="card-topline">
+              <span class="idea-label"><span class="idea-orbit">✦</span> TU IDEA</span>
+              <span class="idea-number" id="idea-number">GIRO 01</span>
+            </div>
+            <div class="idea-content">
+              <div class="idea-category" id="idea-category">CURIOSIDADES</div>
+              <h3 id="idea-title">Cargando una idea…</h3>
+              <div class="script-block">
+                <div class="script-label"><span>▶</span> GUION EN 3 PASOS</div>
+                <ol id="idea-script"></ol>
+              </div>
+              <div class="idea-footer">
+                <div class="duration"><span class="clock-icon">◷</span><span id="idea-duration">20–30 s</span></div>
+                <span class="format-label">FORMATO SHORT</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="button button-primary" id="new-idea" type="button"><span aria-hidden="true">⟳</span> Otra idea</button>
+              <button class="button button-quiet" id="copy-idea" type="button"><span aria-hidden="true">▢</span> Copiar guion</button>
+              <button class="button button-save" id="save-idea" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Guardar</button>
+            </div>
+          </article>
+          <p class="tip"><span aria-hidden="true">✦</span> Consejo: abre con la frase más intrigante. Tienes 2 segundos para atrapar la atención.</p>
+        </div>
+
+        <aside class="favorites-panel" aria-label="Ideas guardadas">
+          <div class="favorites-heading">
+            <div>
+              <p class="section-kicker">02 / TU COLECCIÓN</p>
+              <h2>Guardadas <span class="favorite-count" id="favorite-count">0</span></h2>
+            </div>
+            <span class="bookmark-mark" aria-hidden="true">▤</span>
+          </div>
+          <p class="favorites-note">Tus próximas historias, listas para volver a ellas.</p>
+          <div id="favorites-list" class="favorites-list"></div>
+          <div class="empty-state" id="empty-state">
+            <span class="empty-icon" aria-hidden="true">✧</span>
+            <p>Aún no guardas ideas.</p>
+            <span>Cuando una te encante, añádela a tu colección.</span>
+          </div>
+          <p class="privacy-note"><span aria-hidden="true">⌑</span> Se guardan solo en este dispositivo.</p>
+        </aside>
+      </section>
+
+      <footer class="footer"><span>GIROLAB <span class="brand-dot">∞</span></span><span>Una idea. Un giro. Un Short.</span></footer>
+      <div class="toast" role="status" aria-live="polite" id="toast"></div>
+    </main>
+  </body>
+</html>
